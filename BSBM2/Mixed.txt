@@ -1,0 +1,17 @@
+PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+
+SELECT distinct ?pPN1 (max(?price) as ?maxPrice) WHERE{ 
+	?offer a bsbm:Offer .
+	?offer bsbm:price ?price .
+	?offer bsbm:product ?product1 .
+    ?product1 a bsbm-inst:ProductType1. 
+	?product1 bsbm:productPropertyNumeric1 ?pPN1 .
+	FILTER(?pPN1 > 600 && ?pPN1 < 800)
+	OPTIONAL {
+		?product1 bsbm:productPropertyNumeric2 1000 .
+	}
+}
+GROUP BY(?pPN1)
+ORDER BY(?maxPrice)
+LIMIT 10

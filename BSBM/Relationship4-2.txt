@@ -1,0 +1,22 @@
+PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ele: <http://purl.org/dc/elements/1.1/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT distinct ?label ?title WHERE{ 
+	?review rdf:type bsbm:Review .
+	?review ele:title ?title .
+	?review bsbm:reviewFor ?product .
+    ?product rdf:type bsbm-inst:ProductType1. 
+	?product bsbm:productPropertyNumeric1 ?pPN1 .
+	?product bsbm:producer ?producer1.
+	?producer1 rdf:type bsbm:Producer .
+	?producer1 rdfs:label ?label .
+	?producer1 ele:publisher ?resource .
+	?resource foaf:homepage ?homepage1 .
+	FILTER(?pPN1 < 100 && ?pPN1 > 50)
+}
+ORDER BY DESC(?label) DESC(?title)
+LIMIT 10

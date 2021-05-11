@@ -1,0 +1,23 @@
+PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT distinct ?label ?proptext1 ?proptext2 ?proptext3 ?propnum1 ?propnum2 ?plabel WHERE{ 
+    ?product rdf:type bsbm-inst:ProductType1. 
+	?product rdfs:label ?label. 
+	?product bsbm:productPropertyTextual1 ?proptext1. 
+	?product bsbm:productPropertyTextual2 ?proptext2. 
+	?product bsbm:productPropertyTextual3 ?proptext3. 
+	?product bsbm:productPropertyNumeric1 ?propnum1. 
+	?product bsbm:productPropertyNumeric2 ?propnum2. 
+	?product bsbm:productPropertyNumeric3 ?propnum3. 
+	?product bsbm:producer ?producer1. 
+	?product bsbm:productFeature ?pfeature. 
+	?producer1 rdf:type bsbm:Producer. 
+	?producer1 rdfs:label ?plabel. 
+	?pfeature rdf:type bsbm:ProductFeature. 
+	?pfeature rdfs:label "vulnerably disinters schticks". 
+} 
+ORDER BY(?label)
+LIMIT 5

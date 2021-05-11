@@ -1,0 +1,19 @@
+PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ele: <http://purl.org/dc/elements/1.1/>
+
+SELECT distinct ?label ?price WHERE{ 
+	?offer rdf:type bsbm:Offer .
+	?offer bsbm:product ?product1 .
+	?offer bsbm:price ?price .
+    ?product1 rdf:type bsbm-inst:ProductType7. 
+	?product1 bsbm:productPropertyNumeric1 ?pPN1 .
+	?product1 bsbm:producer ?producer1.
+	?producer1 rdf:type bsbm:Producer .
+	?producer1 rdfs:label ?label .
+	FILTER(?pPN1 < 500)
+}
+ORDER BY(?label) DESC(?price)
+LIMIT 10

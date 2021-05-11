@@ -1,0 +1,16 @@
+PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ele: <http://purl.org/dc/elements/1.1/>
+
+SELECT distinct ?label WHERE{
+    ?product rdf:type bsbm-inst:ProductType1.
+	?product bsbm:productPropertyNumeric1 ?pPN1 .
+	?product rdfs:label ?label.
+	?producer rdf:type bsbm:Producer .
+	?product ele:publisher/ele:publisher ?review .
+	FILTER(?pPN1 > 1000)
+}
+ORDER BY ASC(?label)
+LIMIT 10

@@ -1,0 +1,9 @@
+prefix rel: <http://neo4j.org/vocab/rel#>
+prefix label: <http://neo4j.org/vocab/label#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?software {
+    ?person a rdf:Person .
+    ?software a rdf:Software .
+	?person rel:created/rel:created ?software .
+}

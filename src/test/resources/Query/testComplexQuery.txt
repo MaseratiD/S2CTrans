@@ -1,0 +1,17 @@
+prefix v: <http://neo4j.org/vocab/v#> 
+prefix rel: <http://neo4j.org/vocab/rel#> 
+prefix label: <http://neo4j.org/vocab/label#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+
+SELECT (count(?project) as ?count) 
+WHERE { 
+    ?person rdf:type label:person . 
+    ?person rdf:type label:student . 
+    ?person rel:created ?project . 
+    ?person v:star 11 . 
+    ?person v:age ?age . 
+    ?person v:name '11' . 
+    ?project rdf:type label:project.
+    ?project rel:created ?subproject.
+    FILTER (?age < 30) 
+}GROUP BY (?age)

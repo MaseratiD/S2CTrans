@@ -1,0 +1,12 @@
+prefix v: <http://neo4j.org/vocab/v#>
+prefix rel: <http://neo4j.org/vocab/rel#>
+prefix label: <http://neo4j.org/vocab/label#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?name ?age WHERE {
+	?person rdf:type label:person  .
+	?person v:name ?name .
+	?person v:age ?age .
+	?person rel:created ?project .
+    FILTER (?age > 30)
+}

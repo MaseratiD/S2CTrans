@@ -1,0 +1,6 @@
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix core: <http://www.w3.org/2004/02/skos/core#>
+
+select ?sub where{
+	?sub core:notation "7" .
+}

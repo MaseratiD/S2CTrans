@@ -1,0 +1,8 @@
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+select ?label where{
+	?sub a bsbm:offer .
+	?obj a bsbm:vendor . 
+	<<?sub bsbm:product ?obj>> rdfs:label ?label.
+}

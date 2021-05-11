@@ -1,0 +1,14 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX myNs2: <http://dbtune.org/bbc/peel/signal/1032/>
+prefix rel: <http://neo4j.org/vocab/rel#> 
+prefix v: <http://neo4j.org/vocab/v#> 
+
+SELECT ?rel WHERE {
+	?sub a myNs2:Person . 
+	?sub v:place "Maida Vale 4".
+	?sub ?rel ?obj.
+	?obj a myNs2:Performance . 
+	?obj v:instrument ?instrument .
+} 

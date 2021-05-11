@@ -1,0 +1,14 @@
+prefix v: <http://neo4j.org/vocab/v#>
+prefix rel: <http://neo4j.org/vocab/rel#>
+prefix label: <http://neo4j.org/vocab/label#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?name ?age ?lang WHERE {
+	?person rdf:type label:person .
+	?person v:star 30 .
+	?person v:age ?age .
+	?person rel:created ?project .
+	?project v:name ?name .
+	?project v:lang ?lang .
+	FILTER (?age > 30 && ?age < 50 || ?lang = 'java')
+}limit 2

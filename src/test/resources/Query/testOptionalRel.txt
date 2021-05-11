@@ -1,0 +1,14 @@
+prefix v: <http://neo4j.org/vocab/v#>
+prefix rel: <http://neo4j.org/vocab/rel#>
+prefix label: <http://neo4j.org/vocab/label#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?person WHERE {
+	?person rdf:type label:person  .
+	?person rel:created ?software .
+	?software v:lang "java" .
+	OPTIONAL {
+		?software v:lang "python" .   
+		?software rel:created ?software2 .  
+	}
+}

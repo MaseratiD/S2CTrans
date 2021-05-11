@@ -1,0 +1,71 @@
+Manifest-Version: 1.0
+Main-Class: translator.PerformanceCompare
+Class-Path: bcpkix-jdk15on-1.68.jar jetty-http-9.4.35.v20201120.jar neo4
+ j-concurrent-4.2.3.jar collection-0.7.jar neo4j-cypher-ir-4.2.3.jar jax
+ b-api-2.3.0.jar commons-cli-1.4.jar jakarta.inject-2.6.1.jar parboiled-
+ scala_2.12-1.2.0.jar stax-ex-1.8.1.jar neo4j-native-4.2.3.jar neo4j-cyp
+ her-planner-spi-4.2.3.jar httpclient-cache-4.5.13.jar neo4j-lucene-inde
+ x-4.2.3.jar commons-exec-1.3.jar neo4j-data-collector-4.2.3.jar hk2-uti
+ ls-2.6.1.jar shiro-cache-1.7.0.jar neo4j-cypher-interpreted-runtime-4.2
+ .3.jar neo4j-storage-engine-api-4.2.3.jar neo4j-unsafe-4.2.3.jar neo4j-
+ procedure-api-4.2.3.jar neo4j-exceptions-4.2.3.jar commons-io-2.7.jar s
+ lf4j-api-1.7.28.jar neo4j-cypher-macros-4.2.3.jar jsonld-java-0.13.2.ja
+ r commons-lang3-3.11.jar stax-api-1.0.1.jar jersey-hk2-2.32.jar jersey-
+ server-2.32.jar neo4j-diagnostics-4.2.3.jar neo4j-id-generator-4.2.3.ja
+ r jakarta.validation-api-2.0.2.jar neo4j-collections-4.2.3.jar neo4j-cy
+ pher-runtime-util-4.2.3.jar jackson-core-2.12.1.jar neo4j-ssl-4.2.3.jar
+  neo4j-cypher-planner-4.2.3.jar asm-8.0.1.jar zstd-proxy-4.2.3.jar neo4
+ j-graph-algo-4.2.3.jar jetty-io-9.4.35.v20201120.jar jackson-annotation
+ s-2.12.1.jar neo4j-front-end-4.2.3.jar shiro-crypto-core-1.7.0.jar comm
+ ons-collections-3.2.2.jar neo4j-fabric-4.2.3.jar lucene-core-8.5.1.jar 
+ jaxb-runtime-2.3.2.jar hk2-locator-2.6.1.jar jPowerShell-3.0.jar neo4j-
+ server-4.2.3.jar bcprov-jdk15on-1.68.jar neo4j-cypher-4.2.3.jar neo4j-l
+ ogging-4.2.3.jar FastInfoset-1.2.16.jar jetty-util-ajax-9.4.35.v2020112
+ 0.jar jctools-core-3.1.0.jar shiro-config-ogdl-1.7.0.jar jakarta.xml.bi
+ nd-api-2.3.3.jar neo4j-dbms-4.2.3.jar neo4j-lock-4.2.3.jar jetty-server
+ -9.4.35.v20201120.jar shiro-crypto-cipher-1.7.0.jar jetty-util-9.4.35.v
+ 20201120.jar neo4j-command-line-4.2.3.jar neo4j-bolt-4.2.3.jar jakarta.
+ activation-api-1.2.1.jar reactive-streams-1.0.3.jar jetty-security-9.4.
+ 35.v20201120.jar neo4j-record-storage-engine-4.2.3.jar lucene-querypars
+ er-8.5.1.jar neo4j-schema-4.2.3.jar jena-iri-4.0.0.jar jena-core-4.0.0.
+ jar neo4j-codegen-4.2.3.jar istack-commons-runtime-3.0.8.jar jetty-serv
+ let-9.4.35.v20201120.jar shiro-event-1.7.0.jar jackson-module-jaxb-anno
+ tations-2.11.3.jar scala-reflect-2.12.10.jar jettison-1.4.1.jar jersey-
+ media-jaxb-2.32.jar lucene-analyzers-common-8.5.1.jar poi-ooxml-3.17.ja
+ r shiro-core-1.7.0.jar httpcore-4.4.13.jar slf4j-nop-1.7.30.jar jetty-w
+ ebapp-9.4.35.v20201120.jar commons-codec-1.10.jar javax.annotation-api-
+ 1.3.2.jar netty-all-4.1.55.Final.jar libthrift-0.14.1.jar eclipse-colle
+ ctions-api-10.3.0.jar neo4j-consistency-check-4.2.3.jar jersey-containe
+ r-servlet-2.32.jar cypher-ast-factory-4.2.3.jar shiro-config-core-1.7.0
+ .jar osgi-resource-locator-1.0.3.jar curvesapi-1.04.jar javassist-3.25.
+ 0-GA.jar neo4j-monitoring-4.2.3.jar picocli-4.5.0.jar parboiled-core-1.
+ 2.0.jar lucene-backward-codecs-8.5.1.jar neo4j-configuration-4.2.3.jar 
+ shiro-crypto-hash-1.7.0.jar neo4j-procedure-4.2.3.jar neo4j-util-4.2.3.
+ jar neo4j-ast-4.2.3.jar eclipse-collections-10.3.0.jar jersey-common-2.
+ 32.jar poi-3.17.jar neo4j-label-index-4.2.3.jar commons-beanutils-1.9.4
+ .jar txw2-2.3.2.jar jamm-0.3.3.jar commons-compress-1.20.jar neo4j-cyph
+ er-ast-factory-4.2.3.jar neo4j-security-4.2.3.jar javax.servlet-api-3.1
+ .0.jar jetty-xml-9.4.35.v20201120.jar jackson-jaxrs-base-2.11.3.jar jer
+ sey-container-servlet-core-2.32.jar neo4j-csv-4.2.3.jar jna-5.6.0.jar n
+ eo4j-batch-insert-4.2.3.jar jakarta.activation-1.2.2.jar shiro-lang-1.7
+ .0.jar neo4j-kernel-api-4.2.3.jar neo4j-kernel-4.2.3.jar xmlbeans-2.6.0
+ .jar neo4j-fulltext-index-4.2.3.jar commons-collections4-4.1.jar asm-ut
+ il-8.0.1.jar jackson-databind-2.12.1.jar neo4j-parser-4.2.3.jar asm-tre
+ e-8.0.1.jar neo4j-cypher-dsl-2021.2.0.jar hk2-api-2.6.1.jar scala-libra
+ ry-2.12.10.jar jProcesses-1.6.5.jar neo4j-import-util-4.2.3.jar neo4j-v
+ alues-4.2.3.jar neo4j-graphdb-api-4.2.3.jar commons-logging-1.2.jar jen
+ a-shaded-guava-4.0.0.jar poi-ooxml-schemas-3.17.jar neo4j-4.2.3.jar zst
+ d-jni-1.4.5-6.jar neo4j-common-4.2.3.jar neo4j-spatial-index-4.2.3.jar 
+ jena-base-4.0.0.jar neo4j-cypher-logical-plans-4.2.3.jar neo4j-token-ap
+ i-4.2.3.jar javax.ws.rs-api-2.1.1.jar asm-analysis-8.0.1.jar neo4j-io-4
+ .2.3.jar server-api-4.2.3.jar apiguardian-api-1.1.0.jar neo4j-layout-4.
+ 2.3.jar jcl-over-slf4j-1.7.30.jar jakarta.ws.rs-api-2.1.6.jar neo4j-cyp
+ her-expression-evaluator-4.2.3.jar neo4j-resource-4.2.3.jar neo4j-index
+ -4.2.3.jar commons-text-1.9.jar neo4j-wal-4.2.3.jar WMI4Java-1.6.3.jar 
+ jersey-client-2.32.jar neo4j-import-tool-4.2.3.jar activation-1.1.1.jar
+  annotations-4.2.3.jar neo4j-java-driver-4.2.3.jar neo4j-cypher-javacc-
+ parser-4.2.3.jar jackson-jaxrs-json-provider-2.11.3.jar jena-arq-4.0.0.
+ jar commons-csv-1.8.jar neo4j-rewriting-4.2.3.jar jakarta.annotation-ap
+ i-1.3.5.jar neo4j-expressions-4.2.3.jar reactor-core-3.3.9.RELEASE.jar 
+ httpclient-4.5.13.jar caffeine-2.8.5.jar
+

@@ -4,7 +4,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 select (AVG(?pPN1) as ?avgNumber1) where{
-    ?product rdf:type bsbm-inst:ProductType1 .
+    ?product rdf:type bsbm-inst:ProductType10 .
 	?product bsbm:productPropertyNumeric1 ?pPN1 . 
     ?product bsbm:productPropertyNumeric2 ?pPN2 . 
     FILTER( ?pPN2 < 200).

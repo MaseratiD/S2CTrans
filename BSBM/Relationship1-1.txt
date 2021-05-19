@@ -9,7 +9,7 @@ SELECT distinct ?label WHERE{
     ?product rdf:type bsbm-inst:ProductType1. 
 	?product bsbm:productPropertyNumeric1 ?pPN1 .
 	?product rdfs:label ?label. 
-	FILTER(?pPN1 > 1000)
+	FILTER(?pPN1 = 1000)
 }
 ORDER BY(?label) 
 LIMIT 10

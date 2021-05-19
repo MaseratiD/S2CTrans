@@ -10,6 +10,7 @@ SELECT distinct ?review WHERE {
     ?review rdf:type bsbm:Review . 
     ?review rev:reviewer ?person . 
     ?review bsbm:reviewFor ?product. 
+	?person a foaf:Person. 
     ?person foaf:name "Ruggiero-Delane". 
     ?product rdf:type bsbm-inst:ProductType1 .
     ?product bsbm:productPropertyNumeric1 ?pPN1. 

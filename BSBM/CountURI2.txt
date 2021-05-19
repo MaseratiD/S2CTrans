@@ -4,6 +4,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT (COUNT (?product) as ?total) WHERE { 
+	<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite2/Review12553> a bsbm:Review .
 	<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite2/Review12553> bsbm:reviewFor ?product . 
-	?product a bsbm-inst:ProductType1.	
+	?product a bsbm-inst:ProductType10.	
 }

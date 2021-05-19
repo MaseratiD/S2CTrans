@@ -9,7 +9,7 @@ SELECT distinct ?label WHERE{
 	?product rdfs:label ?label.
 	?review rdf:type bsbm:Review . 
 	?product ^bsbm:reviewFor ?review .
-	FILTER(?pPN1 > 1000)
+	FILTER(?pPN1 = 1000)
 }
 ORDER BY DESC(?label) 
 LIMIT 10

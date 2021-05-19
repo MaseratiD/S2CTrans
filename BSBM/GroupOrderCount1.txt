@@ -4,15 +4,15 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ele: <http://purl.org/dc/elements/1.1/>
 
-SELECT ?title (COUNT (?product) as ?total) WHERE { 
+SELECT ?title (COUNT(?product) AS ?total)  WHERE { 
 	?review rdf:type bsbm:Review . 
 	?review ele:title ?title .
 	?review bsbm:reviewFor ?product. 
-	?product a bsbm-inst:ProductType1 .
+	?product a bsbm-inst:ProductType10 .
 	?product bsbm:productPropertyNumeric1 ?pPN1 .
 	?product bsbm:productFeature ?productFeature1 . 
-	FILTER(?pPN1 > 1000)
+	FILTER(?pPN1 = 1000)
 } 
-GROUP BY(?title) 
+GROUP BY(?title)
 ORDER BY DESC (?total) 
 LIMIT 10

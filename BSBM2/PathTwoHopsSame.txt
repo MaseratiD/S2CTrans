@@ -9,7 +9,7 @@ SELECT distinct ?label WHERE{
 	?product bsbm:productPropertyNumeric1 ?pPN1 .
 	?product rdfs:label ?label.
 	?producer rdf:type bsbm:Producer .
-	?product ele:publisher/ele:publisher ?review .
+	?product ele:publisher/ele:publisher ?producer .
 	FILTER(?pPN1 > 1000)
 }
 ORDER BY ASC(?label)
